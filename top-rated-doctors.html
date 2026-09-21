@@ -14,279 +14,480 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f8fc;
-            color: #1f2937;
+            font-family: Inter, Arial, sans-serif;
+            background: #f7f9fc;
+            color: #172033;
         }
 
-        /* Main Section */
+        /* =========================
+           MAIN SECTION
+        ========================== */
+
         .doctors-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 70px 20px;
+            max-width: 1250px;
+            margin: auto;
+            padding: 70px 25px;
         }
 
-        /* Header */
+        /* =========================
+           HEADER
+        ========================== */
+
         .section-header {
-            text-align: center;
-            margin-bottom: 45px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 35px;
+            gap: 30px;
         }
 
-        .section-header .tag {
-            display: inline-block;
-            background: #e8f4ff;
-            color: #1677c8;
-            padding: 8px 16px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 600;
+        .header-left {
+            max-width: 650px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: #eaf4ff;
+            color: #1476c6;
+            padding: 7px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
             margin-bottom: 15px;
         }
 
         .section-header h1 {
             font-size: 38px;
-            color: #172033;
-            margin-bottom: 12px;
+            line-height: 1.2;
+            margin-bottom: 10px;
         }
 
         .section-header p {
-            max-width: 650px;
-            margin: auto;
-            color: #6b7280;
-            font-size: 16px;
+            color: #718096;
             line-height: 1.7;
+            font-size: 15px;
         }
 
-        /* Doctors Grid */
+        .view-all {
+            color: #1476c6;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .view-all:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           FILTER BAR
+        ========================== */
+
+        .filter-bar {
+            background: white;
+            border: 1px solid #e6ebf1;
+            border-radius: 16px;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(30, 50, 80, 0.04);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box span {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9aa6b5;
+        }
+
+        .search-box input,
+        .filter-bar select {
+            width: 100%;
+            height: 46px;
+            border: 1px solid #dfe5ec;
+            border-radius: 10px;
+            outline: none;
+            padding: 0 15px;
+            background: #fff;
+            color: #263447;
+            font-size: 14px;
+        }
+
+        .search-box input {
+            padding-left: 42px;
+        }
+
+        .search-box input:focus,
+        .filter-bar select:focus {
+            border-color: #1476c6;
+            box-shadow: 0 0 0 3px rgba(20, 118, 198, 0.08);
+        }
+
+        /* =========================
+           DOCTORS GRID
+        ========================== */
+
         .doctors-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 22px;
         }
 
-        /* Doctor Card */
+        /* =========================
+           CARD
+        ========================== */
+
         .doctor-card {
-            background: #ffffff;
+            background: white;
+            border: 1px solid #e7ebf0;
             border-radius: 18px;
-            padding: 25px;
-            border: 1px solid #e5eaf0;
-            transition: 0.3s ease;
-            position: relative;
             overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
         .doctor-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(31, 41, 55, 0.10);
+            transform: translateY(-5px);
+            box-shadow: 0 18px 40px rgba(25, 45, 75, 0.10);
         }
 
-        /* Top Rated Badge */
-        .top-rated {
-            position: absolute;
-            top: 18px;
-            right: 18px;
-            background: #fff7df;
-            color: #d38b00;
-            padding: 6px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-        }
+        /* Card Top */
 
-        /* Doctor Info */
-        .doctor-top {
+        .card-top {
+            padding: 22px;
             display: flex;
-            align-items: center;
             gap: 16px;
-            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .doctor-image-wrapper {
+            position: relative;
+            flex-shrink: 0;
         }
 
         .doctor-image {
-            width: 78px;
-            height: 78px;
-            border-radius: 50%;
+            width: 76px;
+            height: 76px;
+            border-radius: 14px;
             object-fit: cover;
-            border: 4px solid #eef7ff;
         }
 
-        .doctor-name {
-            font-size: 19px;
-            color: #172033;
-            margin-bottom: 6px;
+        .online-dot {
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #22c55e;
+            border: 3px solid white;
+            bottom: 3px;
+            right: 3px;
         }
 
-        .specialization {
-            color: #1677c8;
-            font-size: 14px;
+        .doctor-info {
+            padding-right: 35px;
+        }
+
+        .doctor-info h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .specialty {
+            color: #1476c6;
+            font-size: 13px;
             font-weight: 600;
+            margin-bottom: 8px;
         }
 
-        /* Rating */
         .rating {
             display: flex;
             align-items: center;
-            gap: 7px;
-            margin-bottom: 18px;
+            gap: 6px;
         }
 
         .stars {
-            color: #f5b301;
-            font-size: 18px;
+            color: #f5ad19;
+            font-size: 14px;
             letter-spacing: 1px;
         }
 
         .rating-number {
-            font-weight: bold;
-            color: #374151;
+            font-size: 13px;
+            font-weight: 700;
         }
 
         .reviews {
-            color: #9ca3af;
+            font-size: 12px;
+            color: #9aa5b3;
+        }
+
+        /* Favorite */
+
+        .favorite-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            border: none;
+            background: #f5f7fa;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 17px;
+            transition: 0.2s;
+        }
+
+        .favorite-btn:hover {
+            background: #ffecec;
+        }
+
+        .favorite-btn.active {
+            color: #ef4444;
+            background: #fff0f0;
+        }
+
+        /* Card Body */
+
+        .card-body {
+            padding: 0 22px 20px;
+        }
+
+        .doctor-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            padding: 15px 0;
+            border-top: 1px solid #edf0f3;
+            border-bottom: 1px solid #edf0f3;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: #6d7887;
             font-size: 13px;
         }
 
-        /* Doctor Details */
-        .doctor-details {
-            border-top: 1px solid #edf0f4;
-            border-bottom: 1px solid #edf0f4;
-            padding: 16px 0;
-            margin-bottom: 18px;
-        }
-
-        .detail {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 11px;
-            color: #6b7280;
-            font-size: 14px;
-        }
-
-        .detail:last-child {
-            margin-bottom: 0;
-        }
-
-        .detail-icon {
+        .meta-icon {
             width: 25px;
-            text-align: center;
-            font-size: 16px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f3f8fd;
+            border-radius: 7px;
         }
 
-        /* Bottom Area */
-        .card-bottom {
+        /* Card Bottom */
+
+        .card-footer {
+            padding-top: 18px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
             gap: 10px;
         }
 
-        .fee {
-            color: #172033;
-            font-size: 16px;
-            font-weight: bold;
+        .price {
+            font-size: 18px;
+            font-weight: 800;
         }
 
-        .fee span {
+        .price span {
             display: block;
-            color: #9ca3af;
-            font-size: 12px;
-            font-weight: normal;
+            color: #9aa5b3;
+            font-size: 11px;
+            font-weight: 400;
             margin-top: 3px;
         }
 
-        .buttons {
-            display: flex;
-            gap: 8px;
+        .book-btn {
+            border: none;
+            background: #1476c6;
+            color: white;
+            padding: 11px 17px;
+            border-radius: 9px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.25s;
         }
 
-        .btn {
-            text-decoration: none;
-            padding: 10px 14px;
-            border-radius: 8px;
+        .book-btn:hover {
+            background: #0e5f9e;
+        }
+
+        /* =========================
+           NO RESULTS
+        ========================== */
+
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 60px 20px;
+            color: #7a8797;
+            background: white;
+            border: 1px solid #e6ebf0;
+            border-radius: 16px;
+        }
+
+        .no-results h3 {
+            color: #263447;
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           MODAL
+        ========================== */
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 27, 43, 0.55);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 18px;
+            padding: 28px;
+            position: relative;
+            animation: modalAnimation 0.25s ease;
+        }
+
+        @keyframes modalAnimation {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 18px;
+            border: none;
+            background: #f2f4f7;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .modal-content h2 {
+            margin-bottom: 8px;
+        }
+
+        .modal-content > p {
+            color: #788495;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
             font-size: 13px;
             font-weight: 600;
-            transition: 0.3s;
+            margin-bottom: 7px;
         }
 
-        .profile-btn {
-            color: #1677c8;
-            border: 1px solid #1677c8;
-            background: #ffffff;
-        }
-
-        .profile-btn:hover {
-            background: #eef7ff;
-        }
-
-        .appointment-btn {
-            color: white;
-            background: #1677c8;
-            border: 1px solid #1677c8;
-        }
-
-        .appointment-btn:hover {
-            background: #0e5f9f;
-        }
-
-        /* View All Button */
-        .view-all {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .view-all a {
-            display: inline-block;
-            text-decoration: none;
-            color: #1677c8;
-            font-weight: 600;
-            border: 1px solid #1677c8;
-            padding: 12px 24px;
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            height: 44px;
+            border: 1px solid #dce2e8;
             border-radius: 8px;
-            transition: 0.3s;
+            padding: 0 12px;
+            outline: none;
         }
 
-        .view-all a:hover {
-            background: #1677c8;
+        .confirm-btn {
+            width: 100%;
+            border: none;
+            background: #1476c6;
             color: white;
+            padding: 13px;
+            border-radius: 9px;
+            cursor: pointer;
+            font-weight: 700;
+            margin-top: 5px;
         }
 
-        /* Tablet */
-        @media (max-width: 950px) {
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 1000px) {
+
             .doctors-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .section-header h1 {
-                font-size: 32px;
+            .filter-bar {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .search-box {
+                grid-column: 1 / -1;
             }
         }
 
-        /* Mobile */
         @media (max-width: 650px) {
+
             .doctors-section {
-                padding: 50px 15px;
+                padding: 45px 15px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .section-header h1 {
+                font-size: 30px;
             }
 
             .doctors-grid {
                 grid-template-columns: 1fr;
             }
 
-            .section-header h1 {
-                font-size: 28px;
+            .filter-bar {
+                grid-template-columns: 1fr;
             }
 
-            .card-bottom {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .buttons {
-                width: 100%;
-            }
-
-            .btn {
-                flex: 1;
-                text-align: center;
+            .search-box {
+                grid-column: auto;
             }
         }
     </style>
@@ -294,221 +495,591 @@
 
 <body>
 
-    <section class="doctors-section">
 
-        <!-- Section Header -->
-        <div class="section-header">
+<section class="doctors-section">
 
-            <span class="tag">★ Trusted Healthcare</span>
+    <!-- Header -->
+
+    <div class="section-header">
+
+        <div class="header-left">
+
+            <span class="eyebrow">
+                ⭐ Trusted Healthcare
+            </span>
 
             <h1>Top Rated Doctors</h1>
 
             <p>
-                Meet our highly rated and experienced doctors who are
-                dedicated to providing quality healthcare and personalized
-                treatment.
+                Find experienced and highly rated doctors trusted by
+                thousands of patients for quality healthcare.
             </p>
 
         </div>
 
+        <a href="#" class="view-all">
+            View All Doctors →
+        </a>
 
-        <!-- Doctors -->
-        <div class="doctors-grid">
-
-            <!-- Doctor 1 -->
-            <div class="doctor-card">
-
-                <span class="top-rated">★ Top Rated</span>
-
-                <div class="doctor-top">
-
-                    <img
-                        class="doctor-image"
-                        src="https://randomuser.me/api/portraits/women/44.jpg"
-                        alt="Dr. Sarah Johnson"
-                    >
-
-                    <div>
-                        <h2 class="doctor-name">Dr. Sarah Johnson</h2>
-                        <p class="specialization">Cardiologist</p>
-                    </div>
-
-                </div>
-
-                <div class="rating">
-                    <span class="stars">★★★★★</span>
-                    <span class="rating-number">4.9</span>
-                    <span class="reviews">(245 reviews)</span>
-                </div>
-
-                <div class="doctor-details">
-
-                    <div class="detail">
-                        <span class="detail-icon">🏥</span>
-                        <span>City Medical Hospital</span>
-                    </div>
-
-                    <div class="detail">
-                        <span class="detail-icon">📍</span>
-                        <span>New York, USA</span>
-                    </div>
-
-                    <div class="detail">
-                        <span class="detail-icon">💼</span>
-                        <span>12+ Years Experience</span>
-                    </div>
-
-                </div>
-
-                <div class="card-bottom">
-
-                    <div class="fee">
-                        $80
-                        <span>Consultation</span>
-                    </div>
-
-                    <div class="buttons">
-                        <a href="#" class="btn profile-btn">Profile</a>
-                        <a href="#" class="btn appointment-btn">Book Now</a>
-                    </div>
-
-                </div>
-
-            </div>
+    </div>
 
 
-            <!-- Doctor 2 -->
-            <div class="doctor-card">
+    <!-- Filters -->
 
-                <span class="top-rated">★ Top Rated</span>
+    <div class="filter-bar">
 
-                <div class="doctor-top">
+        <div class="search-box">
 
-                    <img
-                        class="doctor-image"
-                        src="https://randomuser.me/api/portraits/men/32.jpg"
-                        alt="Dr. Michael Brown"
-                    >
+            <span>🔍</span>
 
-                    <div>
-                        <h2 class="doctor-name">Dr. Michael Brown</h2>
-                        <p class="specialization">Neurologist</p>
-                    </div>
-
-                </div>
-
-                <div class="rating">
-                    <span class="stars">★★★★★</span>
-                    <span class="rating-number">4.8</span>
-                    <span class="reviews">(198 reviews)</span>
-                </div>
-
-                <div class="doctor-details">
-
-                    <div class="detail">
-                        <span class="detail-icon">🏥</span>
-                        <span>Central Health Clinic</span>
-                    </div>
-
-                    <div class="detail">
-                        <span class="detail-icon">📍</span>
-                        <span>Chicago, USA</span>
-                    </div>
-
-                    <div class="detail">
-                        <span class="detail-icon">💼</span>
-                        <span>10+ Years Experience</span>
-                    </div>
-
-                </div>
-
-                <div class="card-bottom">
-
-                    <div class="fee">
-                        $75
-                        <span>Consultation</span>
-                    </div>
-
-                    <div class="buttons">
-                        <a href="#" class="btn profile-btn">Profile</a>
-                        <a href="#" class="btn appointment-btn">Book Now</a>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Doctor 3 -->
-            <div class="doctor-card">
-
-                <span class="top-rated">★ Top Rated</span>
-
-                <div class="doctor-top">
-
-                    <img
-                        class="doctor-image"
-                        src="https://randomuser.me/api/portraits/women/68.jpg"
-                        alt="Dr. Emily Davis"
-                    >
-
-                    <div>
-                        <h2 class="doctor-name">Dr. Emily Davis</h2>
-                        <p class="specialization">Dermatologist</p>
-                    </div>
-
-                </div>
-
-                <div class="rating">
-                    <span class="stars">★★★★★</span>
-                    <span class="rating-number">4.9</span>
-                    <span class="reviews">(312 reviews)</span>
-                </div>
-
-                <div class="doctor-details">
-
-                    <div class="detail">
-                        <span class="detail-icon">🏥</span>
-                        <span>Wellness Care Center</span>
-                    </div>
-
-                    <div class="detail">
-                        <span class="detail-icon">📍</span>
-                        <span>Los Angeles, USA</span>
-                    </div>
-
-                    <div class="detail">
-                        <span class="detail-icon">💼</span>
-                        <span>15+ Years Experience</span>
-                    </div>
-
-                </div>
-
-                <div class="card-bottom">
-
-                    <div class="fee">
-                        $70
-                        <span>Consultation</span>
-                    </div>
-
-                    <div class="buttons">
-                        <a href="#" class="btn profile-btn">Profile</a>
-                        <a href="#" class="btn appointment-btn">Book Now</a>
-                    </div>
-
-                </div>
-
-            </div>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search doctor or specialty..."
+            >
 
         </div>
 
 
-        <!-- View All -->
-        <div class="view-all">
-            <a href="#">View All Doctors →</a>
+        <select id="specialtyFilter">
+
+            <option value="all">All Specialties</option>
+            <option value="Cardiologist">Cardiologist</option>
+            <option value="Dermatologist">Dermatologist</option>
+            <option value="Neurologist">Neurologist</option>
+            <option value="Pediatrician">Pediatrician</option>
+            <option value="Dentist">Dentist</option>
+
+        </select>
+
+
+        <select id="sortFilter">
+
+            <option value="rating">Sort: Highest Rated</option>
+            <option value="experience">Most Experienced</option>
+            <option value="priceLow">Price: Low to High</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Doctors -->
+
+    <div class="doctors-grid" id="doctorsGrid"></div>
+
+
+    <!-- No Results -->
+
+    <div class="no-results" id="noResults">
+
+        <h3>No doctors found</h3>
+
+        <p>
+            Try changing your search or filter.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Appointment Modal -->
+
+<div class="modal" id="appointmentModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" id="closeModal">
+            ×
+        </button>
+
+        <h2>Book Appointment</h2>
+
+        <p id="selectedDoctor">
+            Select your preferred date and time.
+        </p>
+
+
+        <div class="form-group">
+
+            <label>Your Name</label>
+
+            <input
+                type="text"
+                placeholder="Enter your name"
+            >
+
         </div>
 
-    </section>
+
+        <div class="form-group">
+
+            <label>Appointment Date</label>
+
+            <input type="date">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Preferred Time</label>
+
+            <select>
+
+                <option>09:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>02:00 PM</option>
+                <option>04:00 PM</option>
+
+            </select>
+
+        </div>
+
+
+        <button class="confirm-btn" id="confirmAppointment">
+            Confirm Appointment
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    /* =========================================
+       DOCTOR DATA
+    ========================================== */
+
+    const doctors = [
+
+        {
+            name: "Dr. Sarah Ahmed",
+            specialty: "Cardiologist",
+            rating: 4.9,
+            reviews: 328,
+            experience: 14,
+            location: "Peshawar, Pakistan",
+            hospital: "City Care Hospital",
+            price: 2500,
+            image: "https://randomuser.me/api/portraits/women/44.jpg"
+        },
+
+        {
+            name: "Dr. Hamza Khan",
+            specialty: "Neurologist",
+            rating: 4.8,
+            reviews: 245,
+            experience: 12,
+            location: "Islamabad, Pakistan",
+            hospital: "Shifa Medical Center",
+            price: 3000,
+            image: "https://randomuser.me/api/portraits/men/32.jpg"
+        },
+
+        {
+            name: "Dr. Ayesha Malik",
+            specialty: "Dermatologist",
+            rating: 4.9,
+            reviews: 412,
+            experience: 11,
+            location: "Lahore, Pakistan",
+            hospital: "Skin & Health Clinic",
+            price: 2000,
+            image: "https://randomuser.me/api/portraits/women/68.jpg"
+        },
+
+        {
+            name: "Dr. Usman Ali",
+            specialty: "Pediatrician",
+            rating: 4.7,
+            reviews: 189,
+            experience: 9,
+            location: "Karachi, Pakistan",
+            hospital: "Children Care Hospital",
+            price: 1800,
+            image: "https://randomuser.me/api/portraits/men/45.jpg"
+        },
+
+        {
+            name: "Dr. Fatima Noor",
+            specialty: "Dentist",
+            rating: 4.8,
+            reviews: 275,
+            experience: 10,
+            location: "Peshawar, Pakistan",
+            hospital: "Smile Dental Clinic",
+            price: 1500,
+            image: "https://randomuser.me/api/portraits/women/65.jpg"
+        },
+
+        {
+            name: "Dr. Bilal Ahmad",
+            specialty: "Cardiologist",
+            rating: 4.6,
+            reviews: 156,
+            experience: 16,
+            location: "Islamabad, Pakistan",
+            hospital: "Prime Health Hospital",
+            price: 3500,
+            image: "https://randomuser.me/api/portraits/men/52.jpg"
+        }
+
+    ];
+
+
+    /* =========================================
+       ELEMENTS
+    ========================================== */
+
+    const doctorsGrid =
+        document.getElementById("doctorsGrid");
+
+    const searchInput =
+        document.getElementById("searchInput");
+
+    const specialtyFilter =
+        document.getElementById("specialtyFilter");
+
+    const sortFilter =
+        document.getElementById("sortFilter");
+
+    const noResults =
+        document.getElementById("noResults");
+
+
+    /* =========================================
+       DISPLAY DOCTORS
+    ========================================== */
+
+    function displayDoctors(list) {
+
+        doctorsGrid.innerHTML = "";
+
+        if (list.length === 0) {
+
+            noResults.style.display = "block";
+
+            return;
+        }
+
+        noResults.style.display = "none";
+
+
+        list.forEach((doctor, index) => {
+
+            const card = document.createElement("div");
+
+            card.className = "doctor-card";
+
+            card.innerHTML = `
+
+                <div class="card-top">
+
+                    <div class="doctor-image-wrapper">
+
+                        <img
+                            class="doctor-image"
+                            src="${doctor.image}"
+                            alt="${doctor.name}"
+                        >
+
+                        <span class="online-dot"></span>
+
+                    </div>
+
+
+                    <div class="doctor-info">
+
+                        <h2>${doctor.name}</h2>
+
+                        <div class="specialty">
+                            ${doctor.specialty}
+                        </div>
+
+                        <div class="rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <span class="rating-number">
+                                ${doctor.rating}
+                            </span>
+
+                            <span class="reviews">
+                                (${doctor.reviews})
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="favorite-btn"
+                        onclick="toggleFavorite(this)"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+
+                <div class="card-body">
+
+                    <div class="doctor-meta">
+
+                        <div class="meta-item">
+
+                            <span class="meta-icon">
+                                🏥
+                            </span>
+
+                            ${doctor.hospital}
+
+                        </div>
+
+
+                        <div class="meta-item">
+
+                            <span class="meta-icon">
+                                📍
+                            </span>
+
+                            ${doctor.location}
+
+                        </div>
+
+
+                        <div class="meta-item">
+
+                            <span class="meta-icon">
+                                💼
+                            </span>
+
+                            ${doctor.experience}+ Years Experience
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card-footer">
+
+                        <div class="price">
+
+                            Rs. ${doctor.price.toLocaleString()}
+
+                            <span>
+                                Consultation Fee
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="book-btn"
+                            onclick="openAppointment('${doctor.name}')"
+                        >
+                            Book Appointment
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            doctorsGrid.appendChild(card);
+
+        });
+
+    }
+
+
+    /* =========================================
+       FILTER + SEARCH + SORT
+    ========================================== */
+
+    function filterDoctors() {
+
+        const search =
+            searchInput.value.toLowerCase();
+
+        const specialty =
+            specialtyFilter.value;
+
+        const sort =
+            sortFilter.value;
+
+
+        let filteredDoctors = doctors.filter(doctor => {
+
+            const matchesSearch =
+                doctor.name.toLowerCase().includes(search) ||
+                doctor.specialty.toLowerCase().includes(search);
+
+            const matchesSpecialty =
+                specialty === "all" ||
+                doctor.specialty === specialty;
+
+            return matchesSearch && matchesSpecialty;
+
+        });
+
+
+        /* Sorting */
+
+        if (sort === "rating") {
+
+            filteredDoctors.sort(
+                (a, b) => b.rating - a.rating
+            );
+
+        }
+
+        else if (sort === "experience") {
+
+            filteredDoctors.sort(
+                (a, b) => b.experience - a.experience
+            );
+
+        }
+
+        else if (sort === "priceLow") {
+
+            filteredDoctors.sort(
+                (a, b) => a.price - b.price
+            );
+
+        }
+
+
+        displayDoctors(filteredDoctors);
+
+    }
+
+
+    /* =========================================
+       SEARCH EVENTS
+    ========================================== */
+
+    searchInput.addEventListener(
+        "input",
+        filterDoctors
+    );
+
+    specialtyFilter.addEventListener(
+        "change",
+        filterDoctors
+    );
+
+    sortFilter.addEventListener(
+        "change",
+        filterDoctors
+    );
+
+
+    /* =========================================
+       FAVORITE BUTTON
+    ========================================== */
+
+    function toggleFavorite(button) {
+
+        button.classList.toggle("active");
+
+        if (button.classList.contains("active")) {
+
+            button.innerHTML = "♥";
+
+        } else {
+
+            button.innerHTML = "♡";
+
+        }
+
+    }
+
+
+    /* =========================================
+       APPOINTMENT MODAL
+    ========================================== */
+
+    const modal =
+        document.getElementById("appointmentModal");
+
+    const selectedDoctor =
+        document.getElementById("selectedDoctor");
+
+    const closeModal =
+        document.getElementById("closeModal");
+
+
+    function openAppointment(doctorName) {
+
+        selectedDoctor.innerHTML =
+            `Book an appointment with <strong>${doctorName}</strong>.`;
+
+        modal.classList.add("show");
+
+    }
+
+
+    closeModal.addEventListener(
+        "click",
+        function () {
+
+            modal.classList.remove("show");
+
+        }
+    );
+
+
+    /* Close modal when clicking outside */
+
+    modal.addEventListener(
+        "click",
+        function(event) {
+
+            if (event.target === modal) {
+
+                modal.classList.remove("show");
+
+            }
+
+        }
+    );
+
+
+    /* =========================================
+       CONFIRM APPOINTMENT
+    ========================================== */
+
+    document
+        .getElementById("confirmAppointment")
+        .addEventListener("click", function() {
+
+            alert(
+                "Appointment request submitted successfully!"
+            );
+
+            modal.classList.remove("show");
+
+        });
+
+
+    /* =========================================
+       INITIAL LOAD
+    ========================================== */
+
+    displayDoctors(doctors);
+
+</script>
 
 </body>
-</html> 
+</html>
