@@ -3,152 +3,861 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Clinic Management System</title>
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <title>Clinic Registration</title>
   </head>
 
-  <body>
-    <section class="hero">
-      <!-- Hero Content -->
-      <div class="hero-content">
-        <div class="hero-text">
-          <div class="badge">
-            <span></span>
-            Smart Clinic Management Platform
-          </div>
+  <body
+    style="
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #1e293b;
+    "
+  >
+    <div style="max-width: 900px; margin: 40px auto; padding: 0 20px">
+      <!-- Header -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <h1 style="margin: 0 0 10px; font-size: 32px; color: #0f172a">
+          Register Your Clinic
+        </h1>
 
-          <h1>
-            Better care starts with
-            <strong>better management.</strong>
-          </h1>
+        <p style="margin: 0; color: #64748b; font-size: 15px">
+          Create your clinic account and start managing your healthcare
+          services.
+        </p>
+      </div>
 
-          <p class="description">
-            Manage patients, doctors, appointments, prescriptions, and clinic
-            operations from one simple and intelligent platform.
+      <!-- Form Card -->
+      <form
+        style="
+          background: #ffffff;
+          padding: 35px;
+          border-radius: 16px;
+          box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+        "
+      >
+        <!-- Clinic Information -->
+        <div style="margin-bottom: 35px">
+          <h2 style="margin: 0 0 5px; font-size: 20px; color: #0f172a">
+            Clinic Information
+          </h2>
+
+          <p style="margin: 0 0 22px; color: #64748b; font-size: 14px">
+            Enter the basic information about your clinic.
           </p>
 
-          <div class="hero-buttons">
-            <a href="#" class="primary-btn"> Start Managing Your Clinic → </a>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px">
+            <div>
+              <label
+                for="clinicName"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Clinic Name
+              </label>
 
-            <a href="#" class="secondary-btn"> Explore Features </a>
+              <input
+                type="text"
+                id="clinicName"
+                name="clinicName"
+                placeholder="e.g. City Care Clinic"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                  outline: none;
+                "
+              />
+            </div>
+
+            <div>
+              <label
+                for="clinicType"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Clinic Type / Specialty
+              </label>
+
+              <input
+                type="text"
+                id="clinicType"
+                name="clinicType"
+                placeholder="e.g. General Medicine"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
+            </div>
+
+            <div>
+              <label
+                for="clinicPhone"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Clinic Phone Number
+              </label>
+
+              <input
+                type="tel"
+                id="clinicPhone"
+                name="clinicPhone"
+                placeholder="+92 300 1234567"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
+            </div>
+
+            <div>
+              <label
+                for="clinicEmail"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Clinic Email Address
+              </label>
+
+              <input
+                type="email"
+                id="clinicEmail"
+                name="clinicEmail"
+                placeholder="clinic@example.com"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
+            </div>
           </div>
 
-          <div class="trust">
-            <div class="trust-item">
-              <div class="trust-icon">✓</div>
+          <!-- Address -->
+          <div style="margin-top: 20px">
+            <label
+              for="clinicAddress"
+              style="
+                display: block;
+                margin-bottom: 7px;
+                font-size: 14px;
+                font-weight: 600;
+              "
+            >
+              Clinic Address
+            </label>
 
-              <div class="trust-text">
-                <strong>All-in-one</strong>
-                <span>Clinic management</span>
-              </div>
+            <textarea
+              id="clinicAddress"
+              name="clinicAddress"
+              rows="3"
+              placeholder="Enter complete clinic address"
+              required
+              style="
+                width: 100%;
+                box-sizing: border-box;
+                padding: 12px 14px;
+                border: 1px solid #dbe2ea;
+                border-radius: 9px;
+                font-size: 14px;
+                resize: vertical;
+              "
+            ></textarea>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 20px;
+              margin-top: 20px;
+            "
+          >
+            <div>
+              <label
+                for="city"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                City
+              </label>
+
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="e.g. Peshawar"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
             </div>
 
-            <div class="trust-item">
-              <div class="trust-icon">⚡</div>
+            <div>
+              <label
+                for="country"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Country
+              </label>
 
-              <div class="trust-text">
-                <strong>Fast & Simple</strong>
-                <span>Easy workflow</span>
-              </div>
+              <input
+                type="text"
+                id="country"
+                name="country"
+                placeholder="e.g. Pakistan"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
+            </div>
+          </div>
+
+          <!-- Logo -->
+          <div style="margin-top: 20px">
+            <label
+              for="clinicLogo"
+              style="
+                display: block;
+                margin-bottom: 7px;
+                font-size: 14px;
+                font-weight: 600;
+              "
+            >
+              Clinic Logo
+            </label>
+
+            <div
+              style="
+                border: 2px dashed #cbd5e1;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+                background: #f8fafc;
+              "
+            >
+              <input
+                type="file"
+                id="clinicLogo"
+                name="clinicLogo"
+                accept="image/*"
+                style="font-size: 14px"
+              />
+
+              <p style="margin: 8px 0 0; font-size: 12px; color: #64748b">
+                Upload PNG, JPG or JPEG
+              </p>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div style="margin-top: 20px">
+            <label
+              for="clinicDescription"
+              style="
+                display: block;
+                margin-bottom: 7px;
+                font-size: 14px;
+                font-weight: 600;
+              "
+            >
+              Clinic Description
+            </label>
+
+            <textarea
+              id="clinicDescription"
+              name="clinicDescription"
+              rows="4"
+              placeholder="Briefly describe your clinic..."
+              style="
+                width: 100%;
+                box-sizing: border-box;
+                padding: 12px 14px;
+                border: 1px solid #dbe2ea;
+                border-radius: 9px;
+                font-size: 14px;
+                resize: vertical;
+              "
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Working Hours -->
+        <div
+          style="
+            margin-bottom: 35px;
+            padding-top: 30px;
+            border-top: 1px solid #e2e8f0;
+          "
+        >
+          <h2 style="margin: 0 0 5px; font-size: 20px; color: #0f172a">
+            Working Hours
+          </h2>
+
+          <p style="margin: 0 0 22px; color: #64748b; font-size: 14px">
+            Set your clinic's regular operating hours.
+          </p>
+
+          <div
+            style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px"
+          >
+            <div>
+              <label
+                for="openingDays"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Opening Days
+              </label>
+
+              <input
+                type="text"
+                id="openingDays"
+                name="openingDays"
+                placeholder="Monday - Saturday"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
             </div>
 
-            <div class="trust-item">
-              <div class="trust-icon">🔒</div>
+            <div>
+              <label
+                for="openingTime"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Opening Time
+              </label>
 
-              <div class="trust-text">
-                <strong>Secure</strong>
-                <span>Protected data</span>
-              </div>
+              <input
+                type="time"
+                id="openingTime"
+                name="openingTime"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
+            </div>
+
+            <div>
+              <label
+                for="closingTime"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Closing Time
+              </label>
+
+              <input
+                type="time"
+                id="closingTime"
+                name="closingTime"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
             </div>
           </div>
         </div>
 
-        <!-- Dashboard Preview -->
-        <div class="preview">
-          <div class="dashboard-card">
-            <div class="dashboard-header">
-              <div class="dashboard-title">Clinic Overview</div>
+        <!-- Admin Information -->
+        <div
+          style="
+            margin-bottom: 35px;
+            padding-top: 30px;
+            border-top: 1px solid #e2e8f0;
+          "
+        >
+          <h2 style="margin: 0 0 5px; font-size: 20px; color: #0f172a">
+            Owner / Admin Information
+          </h2>
 
-              <div class="status">● System Online</div>
+          <p style="margin: 0 0 22px; color: #64748b; font-size: 14px">
+            Create the administrator account for your clinic.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px">
+            <div>
+              <label
+                for="adminName"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Owner / Admin Name
+              </label>
+
+              <input
+                type="text"
+                id="adminName"
+                name="adminName"
+                placeholder="Enter full name"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
             </div>
 
-            <div class="stats">
-              <div class="stat">
-                <span>Patients</span>
-                <strong>1,284</strong>
-              </div>
+            <div>
+              <label
+                for="adminEmail"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Owner / Admin Email
+              </label>
 
-              <div class="stat">
-                <span>Doctors</span>
-                <strong>24</strong>
-              </div>
-
-              <div class="stat">
-                <span>Appointments</span>
-                <strong>86</strong>
-              </div>
+              <input
+                type="email"
+                id="adminEmail"
+                name="adminEmail"
+                placeholder="admin@example.com"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
             </div>
 
-            <div class="appointment">
-              <div class="appointment-title">Today's Appointments</div>
+            <div>
+              <label
+                for="adminPhone"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Owner / Admin Phone Number
+              </label>
 
-              <div class="patient">
-                <div class="patient-info">
-                  <div class="avatar">AK</div>
-
-                  <div>
-                    <strong>Ali Khan</strong>
-                    <span>General Checkup</span>
-                  </div>
-                </div>
-
-                <div class="time">10:30 AM</div>
-              </div>
-
-              <div class="patient">
-                <div class="patient-info">
-                  <div class="avatar">SA</div>
-
-                  <div>
-                    <strong>Sara Ahmed</strong>
-                    <span>Follow-up</span>
-                  </div>
-                </div>
-
-                <div class="time">11:15 AM</div>
-              </div>
-
-              <div class="patient">
-                <div class="patient-info">
-                  <div class="avatar">UK</div>
-
-                  <div>
-                    <strong>Usman Khan</strong>
-                    <span>Consultation</span>
-                  </div>
-                </div>
-
-                <div class="time">12:00 PM</div>
-              </div>
+              <input
+                type="tel"
+                id="adminPhone"
+                name="adminPhone"
+                placeholder="+92 300 1234567"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
             </div>
-          </div>
 
-          <div class="floating-card one">
-            <div class="floating-title">Appointments Today</div>
+            <div></div>
 
-            <div class="floating-value">+18.4%</div>
-          </div>
+            <div>
+              <label
+                for="password"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Password
+              </label>
 
-          <div class="floating-card two">
-            <div class="floating-title">Patient Satisfaction</div>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a password"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
+            </div>
 
-            <div class="floating-value">96%</div>
+            <div>
+              <label
+                for="confirmPassword"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Confirm Password
+              </label>
+
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm your password"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+
+        <!-- Clinic Details -->
+        <div
+          style="
+            margin-bottom: 35px;
+            padding-top: 30px;
+            border-top: 1px solid #e2e8f0;
+          "
+        >
+          <h2 style="margin: 0 0 5px; font-size: 20px; color: #0f172a">
+            Clinic Details
+          </h2>
+
+          <p style="margin: 0 0 22px; color: #64748b; font-size: 14px">
+            Add additional information about your clinic.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px">
+            <div>
+              <label
+                for="numberOfDoctors"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Number of Doctors
+              </label>
+
+              <input
+                type="number"
+                id="numberOfDoctors"
+                name="numberOfDoctors"
+                min="0"
+                placeholder="e.g. 5"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
+            </div>
+
+            <div>
+              <label
+                for="numberOfStaff"
+                style="
+                  display: block;
+                  margin-bottom: 7px;
+                  font-size: 14px;
+                  font-weight: 600;
+                "
+              >
+                Number of Staff
+              </label>
+
+              <input
+                type="number"
+                id="numberOfStaff"
+                name="numberOfStaff"
+                min="0"
+                placeholder="e.g. 10"
+                required
+                style="
+                  width: 100%;
+                  box-sizing: border-box;
+                  padding: 12px 14px;
+                  border: 1px solid #dbe2ea;
+                  border-radius: 9px;
+                  font-size: 14px;
+                "
+              />
+            </div>
+          </div>
+
+          <div style="margin-top: 20px">
+            <label
+              for="services"
+              style="
+                display: block;
+                margin-bottom: 7px;
+                font-size: 14px;
+                font-weight: 600;
+              "
+            >
+              Services Offered
+            </label>
+
+            <textarea
+              id="services"
+              name="services"
+              rows="4"
+              placeholder="e.g. General Checkup, Laboratory, Pharmacy..."
+              style="
+                width: 100%;
+                box-sizing: border-box;
+                padding: 12px 14px;
+                border: 1px solid #dbe2ea;
+                border-radius: 9px;
+                font-size: 14px;
+                resize: vertical;
+              "
+            ></textarea>
+          </div>
+
+          <div style="margin-top: 20px">
+            <label
+              for="emergencyContact"
+              style="
+                display: block;
+                margin-bottom: 7px;
+                font-size: 14px;
+                font-weight: 600;
+              "
+            >
+              Emergency Contact Number
+            </label>
+
+            <input
+              type="tel"
+              id="emergencyContact"
+              name="emergencyContact"
+              placeholder="+92 300 1234567"
+              style="
+                width: 100%;
+                box-sizing: border-box;
+                padding: 12px 14px;
+                border: 1px solid #dbe2ea;
+                border-radius: 9px;
+                font-size: 14px;
+              "
+            />
+          </div>
+
+          <div style="margin-top: 20px">
+            <label
+              for="website"
+              style="
+                display: block;
+                margin-bottom: 7px;
+                font-size: 14px;
+                font-weight: 600;
+              "
+            >
+              Website / Social Media Links
+              <span style="font-weight: 400; color: #94a3b8">(Optional)</span>
+            </label>
+
+            <input
+              type="url"
+              id="website"
+              name="website"
+              placeholder="https://example.com"
+              style="
+                width: 100%;
+                box-sizing: border-box;
+                padding: 12px 14px;
+                border: 1px solid #dbe2ea;
+                border-radius: 9px;
+                font-size: 14px;
+              "
+            />
+          </div>
+        </div>
+
+        <!-- Terms -->
+        <div
+          style="
+            padding: 20px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            margin-bottom: 25px;
+          "
+        >
+          <label
+            style="
+              display: flex;
+              align-items: flex-start;
+              gap: 10px;
+              font-size: 14px;
+              color: #475569;
+              cursor: pointer;
+            "
+          >
+            <input
+              type="checkbox"
+              id="terms"
+              name="terms"
+              required
+              style="margin-top: 3px; width: 16px; height: 16px"
+            />
+
+            <span>
+              I accept the
+              <a
+                href="#"
+                style="color: #2563eb; text-decoration: none; font-weight: 600"
+                >Terms & Conditions</a
+              >
+            </span>
+          </label>
+        </div>
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          style="
+            width: 100%;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.2);
+          "
+        >
+          Register Clinic
+        </button>
+
+        <p
+          style="
+            text-align: center;
+            margin: 15px 0 0;
+            color: #94a3b8;
+            font-size: 12px;
+          "
+        >
+          Your information will be securely stored.
+        </p>
+      </form>
+    </div>
   </body>
 </html>
